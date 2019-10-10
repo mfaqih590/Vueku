@@ -4,7 +4,10 @@
     <button @click="clearMessage">clear</button>
     <!-- <button @click="clearMessage=''">clear</button> -->
     <input v-model="message" @keyup="handleKeyup"/>
-    <h1>{{message}}</h1>
+    <!-- <h1>{{message}}</h1> -->
+    <h5 v-if="message.length">{{message}}</h5>
+    <h6 v-else> No Message</h6>
+    <p>{{uppercaseMessage()}}</p>
   </q-page>
 </template>
 
@@ -25,8 +28,10 @@ export default {
       if(e.keyCode==27) {
         this.message=''
         
-      } 
-      
+      }      
+    },
+    uppercaseMessage(){
+      return this.message.toUpperCase()
     }
   }
 }

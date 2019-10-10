@@ -34,6 +34,7 @@
 #form {
     margin-top: 10%;
     margin-left: 30%;
+    border:15px solid rgb(139, 69, 19)
 }
 </style>
 <script>
