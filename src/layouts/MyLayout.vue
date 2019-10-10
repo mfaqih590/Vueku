@@ -27,7 +27,7 @@
     >
       <q-list>
         <q-item-label header>Essential Links</q-item-label>
-        <q-item clickable tag="a" color="white" href="/#/">
+        <q-item clickable tag="a" href="/#/">
           <q-item-section avatar>
             <q-icon name="public" />
           </q-item-section>
