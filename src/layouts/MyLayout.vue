@@ -26,59 +26,59 @@
       content-class="bg-primary"
     >
       <q-list>
-        <q-item-label header>Essential Links</q-item-label>
+        <q-item-label header style="color : white">Essential Links</q-item-label>
         <q-item clickable tag="a" href="/#/">
           <q-item-section avatar>
-            <q-icon name="public" />
+            <q-icon name="public" style="color : white"/>
           </q-item-section>
           <q-item-section>
-            <q-item-label>HOME</q-item-label>
-            <q-item-label caption>-----</q-item-label>
+            <q-item-label style="color : white">HOME</q-item-label>
+            <q-item-label caption style="color : white">-----</q-item-label>
           </q-item-section>
         </q-item>
         <q-item clickable tag="a" href="/#/login">
           <q-item-section avatar>
-            <q-icon name="face" />
+            <q-icon name="face" style="color : white"/>
           </q-item-section>
           <q-item-section>
-            <q-item-label>LOGIN</q-item-label>
-            <q-item-label caption>Login Account</q-item-label>
+            <q-item-label style="color : white">LOGIN</q-item-label>
+            <q-item-label caption style="color : white">Login Account</q-item-label>
           </q-item-section>
         </q-item>
         <q-item clickable tag="a" target="_blank" href="https://chat.quasar.dev">
           <q-item-section avatar>
-            <q-icon name="chat" />
+            <q-icon name="chat" style="color : white"/>
           </q-item-section>
           <q-item-section>
-            <q-item-label>Discord Chat Channel</q-item-label>
-            <q-item-label caption>chat.quasar.dev</q-item-label>
+            <q-item-label style="color : white">Discord Chat Channel</q-item-label>
+            <q-item-label caption style="color : white">chat.quasar.dev</q-item-label>
           </q-item-section>
         </q-item>
         <q-item clickable tag="a" target="_blank" href="https://forum.quasar.dev">
           <q-item-section avatar>
-            <q-icon name="record_voice_over" />
+            <q-icon name="record_voice_over" style="color : white"/>
           </q-item-section>
           <q-item-section>
-            <q-item-label>Forum</q-item-label>
-            <q-item-label caption>forum.quasar.dev</q-item-label>
+            <q-item-label style="color : white">Forum</q-item-label>
+            <q-item-label caption style="color : white">forum.quasar.dev</q-item-label>
           </q-item-section>
         </q-item>
         <q-item clickable tag="a" target="_blank" href="https://twitter.quasar.dev">
           <q-item-section avatar>
-            <q-icon name="rss_feed" />
+            <q-icon name="rss_feed" style="color : white"/>
           </q-item-section>
           <q-item-section>
-            <q-item-label>Twitter</q-item-label>
-            <q-item-label caption>@quasarframework</q-item-label>
+            <q-item-label style="color : white">Twitter</q-item-label>
+            <q-item-label caption style="color : white">@quasarframework</q-item-label>
           </q-item-section>
         </q-item>
         <q-item clickable tag="a" target="_blank" href="https://facebook.quasar.dev">
           <q-item-section avatar>
-            <q-icon name="public" />
+            <q-icon name="public" style="color : white"/>
           </q-item-section>
           <q-item-section>
-            <q-item-label>Facebook</q-item-label>
-            <q-item-label caption>@QuasarFramework</q-item-label>
+            <q-item-label style="color : white">Facebook</q-item-label>
+            <q-item-label caption style="color : white">@QuasarFramework</q-item-label>
           </q-item-section>
         </q-item>
       </q-list>
