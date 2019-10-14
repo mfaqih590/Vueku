@@ -3,7 +3,7 @@
     <q-table
       class="my-sticky-header-table"
       title="OWNERS"
-      :data="owners"
+      :data="admins"
       :columns="columns"
       row-key="name"
     />
@@ -18,55 +18,45 @@ export default {
     return {
       columns: [
         {
-          name: 'Nama',
+          name: 'Username',
           required: true,
-          label: 'Nama',
+          label: 'Username',
           align: 'left',
-          field: row => row.Nama,
+          field: row => row.Username,
           format: val => `${val}`,
           sortable: true,
           classes: 'bg-grey-2 ellipsis',
           style: 'max-width: 100px'
         },
         {
-          name: 'JenisKelamin',
+          name: 'Password',
           required: true,
-          label: 'Jenis Kelamin',
+          label: 'Password',
           align: 'left',
-          field: row => row.JenisKelamin,
+          field: row => row.Password,
           format: val => `${val}`,
           sortable: true,
           classes: 'bg-grey-2 ellipsis',
           style: 'max-width: 100px'
         },
         {
-          name: 'TanggalLahir',
+          type:"date",
+          name: 'TanggalMasuk',
           required: true,
-          label: 'Tanggal Lahir',
+          label: 'Tanggal Masuk',
           align: 'left',
-          field: row => row.TanggalLahir,
+          field: row => row.TanggalMasuk,
           format: val => `${val}`,
           sortable: true,
           classes: 'bg-grey-2 ellipsis',
           style: 'max-width: 100px'
         },
         {
-          name: 'NoTelepon',
-          required: true,
-          label: 'No Telepon',
-          align: 'left',
-          field: row => row.NoTelepon,
-          format: val => `${val}`,
-          sortable: true,
-          classes: 'bg-grey-2 ellipsis',
-          style: 'max-width: 100px'
-        },
-        {
-          name: 'Email',
+          name: 'email',
           required: true,
           label: 'Email',
           align: 'left',
-          field: row => row.Email,
+          field: row => row.email,
           format: val => `${val}`,
           sortable: true,
           classes: 'bg-grey-2 ellipsis',
@@ -84,7 +74,7 @@ export default {
           style: 'max-width: 100px'
         }
          ],
-      owners: [
+      admins: [
         {
           // nama : '',
           // email : ''
@@ -93,8 +83,8 @@ export default {
     }
   },
   async mounted(){
-    const response = await axios.get('http://localhost:3000/api/owners')
-    this.owners=response.data
+    const response = await axios.get('http://localhost:3000/api/admins')
+    this.admins=response.data
   }
 }
 </script>

@@ -1,11 +1,11 @@
 <template>
-  <q-page class="q-pa-md">
+  <q-page padding>
     <!-- <img alt="Quasar logo" src="~assets/asd.png"> -->
+    <!-- <button @click="clearMessage=''">clear</!--> 
+    <input v-model="message" @keyup.esc="clearMessage" @keyup.enter="alertMessage"/>
     <button @click="clearMessage">clear</button>
-    <button @click="clearMessage=''">clear</button>
-    <input v-model="message" @keyup="handleKeyup"/>
     <h1>{{message}}</h1>
-    <h5 v-if="message.length">{{message}}</h5>
+    <h5 class="border-grey" v-if="message.length">{{message}}</h5>
     <h6 v-else> No Message</h6>
     <p>{{uppercaseMessage()}}</p>
     <ul>
@@ -41,6 +41,9 @@ export default {
     clearMessage(){
       this.message=""
     },
+    alertMessage() {
+      alert(this.Message="Succes")
+    },
     handleKeyup(e) {
       // console.log(e)
       if(e.keyCode==27) {
@@ -54,3 +57,8 @@ export default {
   }
 }
 </script>
+<style> 
+    .border-grey {
+      border: 1px solid grey;
+    }
+</style>

@@ -40,7 +40,7 @@
       v-model="leftDrawerOpen"
       show-if-above
       bordered
-      content-class="bg-primary"
+      content-class="bg-warning"
     >
       <q-list>
         <q-item-label header style="color : white">Essential Links</q-item-label>
@@ -71,22 +71,22 @@
             <q-item-label caption style="color : white">_________</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://forum.quasar.dev">
+        <q-item clickable tag="a" href="/#/get">
           <q-item-section avatar>
-            <q-icon name="record_voice_over" style="color : white"/>
+            <q-icon name="book" style="color : white"/>
           </q-item-section>
           <q-item-section>
-            <q-item-label style="color : white">Forum</q-item-label>
-            <q-item-label caption style="color : white">forum.quasar.dev</q-item-label>
+            <q-item-label style="color : white">GET</q-item-label>
+            <q-item-label caption style="color : white">Get Data</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://twitter.quasar.dev">
+        <q-item clickable tag="a" href="/#/post">
           <q-item-section avatar>
-            <q-icon name="rss_feed" style="color : white"/>
+            <q-icon name="add" style="color : white"/>
           </q-item-section>
           <q-item-section>
-            <q-item-label style="color : white">Twitter</q-item-label>
-            <q-item-label caption style="color : white">@quasarframework</q-item-label>
+            <q-item-label style="color : white">POST</q-item-label>
+            <q-item-label caption style="color : white">Post Data</q-item-label>
           </q-item-section>
         </q-item>
         <q-item clickable tag="a" target="_blank" href="https://facebook.quasar.dev">
