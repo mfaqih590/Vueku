@@ -1,8 +1,9 @@
 <template>
   <div class="q-pa-md">
+    <router-link to="/post"><q-btn color="primary" icon="add_box"
+    label="admin" class="sp"/>
+    </router-link>
     <q-table
-      class="my-sticky-header-table"
-      title="OWNERS"
       :data="admins"
       :columns="columns"
       row-key="name"
@@ -88,20 +89,4 @@ export default {
   }
 }
 </script>
-<style lang="sass">
-.my-sticky-header-table
-  /* max height is important */
-  .q-table__middle
-    max-height: 200px
-
-  .q-table__top,
-  .q-table__bottom,
-  thead tr:first-child th /* bg color is important for th; just specify one */
-    background-color: #3CB371
-
-  thead tr:first-child th
-    position: sticky
-    top: 0
-    opacity: 1
-    z-index: 1
-</style>
+<style scoped></style>

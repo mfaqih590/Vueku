@@ -1,6 +1,7 @@
 <template>
 <qpage padding>
   <div class="q-pa-md">
+    <q-item-label id="font" class="flex flex-center">PLEASE INPUT</q-item-label>
     <div id="form" class="q-pa-md" style="max-width: 400px">
       <q-form
         @submit="onSubmit"
@@ -14,7 +15,7 @@
           lazy-rules
           :rules="[ val => val && val.length > 0 || 'Please type something']"
         />
-
+  
         <q-input
           filled
           type="password"
@@ -50,8 +51,7 @@
         />
 
         <div>
-          <q-btn label="Login" type="submit" color="primary"/>
-          
+          <q-btn label="Submit" type="submit" color="primary"/>
         </div>
       </q-form>
     </div>
@@ -60,9 +60,15 @@
 </template>
 
 <style scoped>
-
-  #form{
-    /* margin-top: 15%;  */
+  #font {
+    font-size : 50px;
+    font-family: times-new-roman;
+    color: #4682B4
+  }
+    #form {
+    margin-top: 0%;
+    margin-left: 33%;
+    border:15px solid #4682B4
   }
   
 </style>
@@ -80,7 +86,7 @@ export default {
       email : ""
     }
   },
-
+  
   methods : {
     onSubmit(){
       let self = this;

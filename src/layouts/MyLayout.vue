@@ -40,10 +40,10 @@
       v-model="leftDrawerOpen"
       show-if-above
       bordered
-      content-class="bg-warning"
+      content-class="bg-primary"
     >
       <q-list>
-        <q-item-label header style="color : white">Essential Links</q-item-label>
+        <q-item-label header style="color : white">MENU</q-item-label>
         <q-item clickable tag="a" href="/#/">
           <q-item-section avatar>
             <q-icon name="public" style="color : white"/>
@@ -77,7 +77,7 @@
           </q-item-section>
           <q-item-section>
             <q-item-label style="color : white">GET</q-item-label>
-            <q-item-label caption style="color : white">Get Data</q-item-label>
+            <q-item-label caption style="color : white">Get Data Owner</q-item-label>
           </q-item-section>
         </q-item>
         <q-item clickable tag="a" href="/#/post">
@@ -89,13 +89,13 @@
             <q-item-label caption style="color : white">Post Data</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://facebook.quasar.dev">
+        <q-item clickable tag="a" href="/#/admin">
           <q-item-section avatar>
-            <q-icon name="public" style="color : white"/>
+            <q-icon name="face" style="color : white"/>
           </q-item-section>
           <q-item-section>
-            <q-item-label style="color : white">Facebook</q-item-label>
-            <q-item-label caption style="color : white">@QuasarFramework</q-item-label>
+            <q-item-label style="color : white">GET</q-item-label>
+            <q-item-label caption style="color : white">Get Data Admin</q-item-label>
           </q-item-section>
         </q-item>
       </q-list>

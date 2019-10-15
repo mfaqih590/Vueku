@@ -1,8 +1,6 @@
 <template>
   <div class="q-pa-md">
-    <q-table
-      class="my-sticky-header-table"
-      title="OWNERS"
+    <q-table 
       :data="owners"
       :columns="columns"
       row-key="name"
@@ -99,6 +97,7 @@ export default {
 }
 </script>
 <style lang="sass">
+
 .my-sticky-header-table
   /* max height is important */
   .q-table__middle
@@ -107,7 +106,7 @@ export default {
   .q-table__top,
   .q-table__bottom,
   thead tr:first-child th /* bg color is important for th; just specify one */
-    background-color: #3CB371
+    background-color: #4682B4
 
   thead tr:first-child th
     position: sticky
