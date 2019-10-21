@@ -24,7 +24,7 @@
 export default {
   data() {
     return {
-    message:'Test Vue',
+    message:'',
     tasks: [{
       name:"go to shop",
       dueDate:"2019/02/12",

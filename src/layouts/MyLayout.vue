@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
+      <q-toolbar class="bg-secondary">
         <q-btn
           flat
           dense
@@ -13,34 +13,27 @@
         <q-toolbar-title>
           Muhammad Faqih
         </q-toolbar-title>
-      <q-btn-dropdown label="Setting " elevated class="bg-white text-primary">
-      <!-- <q-list>
-        <q-item clickable v-close-popup @click="onItemClick">
-          <q-item-section>
-            <q-item-label>Photos</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable v-close-popup @click="onItemClick">
-          <q-item-section>
-            <q-item-label>Videos</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable v-close-popup @click="onItemClick">
-          <q-item-section>
-            <q-item-label>Articles</q-item-label>
-          </q-item-section>
-        </q-item>
-      </q-list> -->
-    </q-btn-dropdown>
+        <q-btn-dropdown label="AKUN" 
+        elevated class="bg-white text-secondary">
+        <q-list>
+          <q-item clickable v-close-popup 
+          tag="a" href="/#/login">
+            <q-item-section>
+              <q-item-label id="font">Log Out</q-item-label>
+            </q-item-section>
+          </q-item>
+        </q-list>
+      </q-btn-dropdown>
         <!-- <div>Quasar v{{ $q.version }}</div> -->
       </q-toolbar>
     </q-header>
 
     <q-drawer
       v-model="leftDrawerOpen"
+      :width="200"
       show-if-above
       bordered
-      content-class="bg-primary"
+      content-class="bg-secondary"
     >
       <q-list>
         <q-item-label header style="color : white">MENU</q-item-label>
@@ -53,13 +46,13 @@
             <q-item-label caption style="color : white">-----</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a" href="/#/login">
+        <q-item clickable tag="a" href="/#/employee">
           <q-item-section avatar>
             <q-icon name="face" style="color : white"/>
           </q-item-section>
           <q-item-section>
-            <q-item-label style="color : white">LOGIN</q-item-label>
-            <q-item-label caption style="color : white">Login Account</q-item-label>
+            <q-item-label style="color : white">EMPLOYEE</q-item-label>
+            <q-item-label caption style="color : white">Data Employee</q-item-label>
           </q-item-section>
         </q-item>
         <q-item clickable tag="a" href="/#/spinner">
@@ -106,6 +99,13 @@
     </q-page-container>
   </q-layout>
 </template>
+<style scoped>
+#font {
+    font-size : 15px;
+    font-family: times-new-roman;
+    color: #26A69A
+  }
+</style>
 
 <script>
 export default {

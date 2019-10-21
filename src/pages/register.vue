@@ -1,5 +1,4 @@
 <template>
-<qpage padding>
   <div class="q-pa-md">
     <q-item-label id="font" class="flex flex-center">PLEASE INPUT</q-item-label>
     <div id="form" class="q-pa-md" style="max-width: 400px">
@@ -9,9 +8,17 @@
       >
         <q-input
           filled
-          v-model="Username"
+          v-model="username"
           label="Username"
           hint="Username"
+          lazy-rules
+          :rules="[ val => val && val.length > 0 || 'Please type something']"
+        />
+        <q-input
+          filled
+          v-model="email"
+          label="Email"
+          hint="Email"
           lazy-rules
           :rules="[ val => val && val.length > 0 || 'Please type something']"
         />
@@ -19,7 +26,7 @@
         <q-input
           filled
           type="password"
-          v-model="Password"
+          v-model="password"
           label="Password "
           hint="Password"
           lazy-rules
@@ -27,39 +34,27 @@
             val => val !== null && val !== '' || 'Please enter your password',
           ]"
         />
-
-        <q-input
-          filled
-          type="date"
-          v-model="TanggalMasuk"
-          hint="Tanggal Masuk "
-          lazy-rules
-          :rules="[
-            val => val !== null && val !== '' || 'Please enter your password',
-          ]"
-        />
-
-        <q-input
-          filled
-          v-model="email"
-          label="Email "
-          hint="Email"
-          lazy-rules
-          :rules="[
-            val => val !== null && val !== '' || 'Please enter your password',
-          ]"
-        />
-
         <div>
-          <q-btn label="Submit" type="submit" color="red"/>
+          <q-btn class="full-width" label="Submit" type="submit" color="red"/>
+        </div>
+        <div>
+          <q-item-label id="or" class="flex flex-center">OR</q-item-label>
+        </div>
+        <div>
+          <router-link to="/login"><q-btn class="full-width" color="red"
+          label="Sign In"/></router-link>
         </div>
       </q-form>
     </div>
   </div>
-  </qpage>
 </template>
 
 <style scoped>
+  #or {
+    font-size : 15px;
+    font-family: times-new-roman;
+    color: black
+  }
   #font {
     font-size : 50px;
     font-family: times-new-roman;
@@ -67,7 +62,7 @@
   }
     #form {
     margin-top: 0%;
-    margin-left: 33%;
+    margin-left: 36.4%;
     border:15px solid #26A69A
   }
   
@@ -80,10 +75,9 @@ export default {
 
   data(){
     return{
-      Username : "",
-      Password : "",
-      TanggalMasuk : "",
-      email : ""
+      username : "",
+      email:"",
+      password : ""
     }
   },
   
@@ -91,14 +85,13 @@ export default {
     onSubmit(){
       let self = this;
       
-    axios.post('http://localhost:3000/api/admins', {
-    Username: self.Username,
-    Password: self.Password,
-    TanggalMasuk: self.TanggalMasuk,
-    email: self.email
+    axios.post('http://localhost:3000/api/Users', {
+    username: self.username,
+    email: self.email,
+    password: self.password,
     })
     .then(function (response) {
-      return  self.$router.push('/admin')
+      return  self.$router.push('/login')
          
     })
     .catch(function (error) {

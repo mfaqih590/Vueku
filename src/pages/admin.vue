@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-md">
-    <router-link to="/post"><q-btn color="primary" icon="add_box"
+    <router-link to="/post"><q-btn color="red" icon="add_box"
     label="admin" class="sp"/>
     </router-link>
     <q-table
@@ -26,20 +26,20 @@ export default {
           field: row => row.Username,
           format: val => `${val}`,
           sortable: true,
-          classes: 'bg-grey-2 ellipsis',
+          classes: 'bg-secondary-2 ellipsis',
           style: 'max-width: 100px'
         },
-        {
-          name: 'Password',
-          required: true,
-          label: 'Password',
-          align: 'left',
-          field: row => row.Password,
-          format: val => `${val}`,
-          sortable: true,
-          classes: 'bg-grey-2 ellipsis',
-          style: 'max-width: 100px'
-        },
+        // {
+        //   name: 'Password',
+        //   required: true,
+        //   label: 'Password',
+        //   align: 'left',
+        //   field: row => row.Password,
+        //   format: val => `${val}`,
+        //   sortable: true,
+        //   classes: 'bg-grey-2 ellipsis',
+        //   style: 'max-width: 100px'
+        // },
         {
           type:"date",
           name: 'TanggalMasuk',

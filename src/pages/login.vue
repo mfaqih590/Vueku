@@ -17,19 +17,26 @@
       />
       </q-card-section>
       <q-card-section>
-    <q-input
-        filled
-        type="password"
-        v-model="password"
-        label="Your Password *" 
-        hint="Password"
-        lazy-rules
-        :rules="[ val => val && val.length > 0 || 'Please type something']"
-      />
+      <q-input v-model="password" filled :type="isPwd ? 'password' : 'text'" 
+      hint="Password" label="Your Password *">
+        <template v-slot:append>
+          <q-icon
+            :name="isPwd ? 'visibility_off' : 'visibility'"
+            class="cursor-pointer"
+            @click="isPwd = !isPwd"
+          />
+        </template>
+      </q-input>
       </q-card-section>
       <div>
         <q-card-section>
-        <q-btn class="full-width" label="Submit" type="submit" color="primary"/>
+        <q-btn class="full-width" label="Sign In" type="submit" color="primary"/>
+        </q-card-section>
+        <q-item-label id="font" class="flex flex-center">OR</q-item-label>
+        <q-card-section>
+        <router-link to="/register"><q-btn class="full-width" color="red"
+        label="Sign up"/>
+        </router-link>
         </q-card-section>
       </div>
     </q-form>
@@ -38,6 +45,11 @@
 </template>
 
 <style scoped>
+#font {
+    font-size : 10px;
+    font-family: times-new-roman;
+    color: red
+  }
 #form {
     margin-top: 10%;
     margin-left: 40%;
@@ -52,7 +64,8 @@ export default {
   data () {
     return {
       username: "",
-      password: ""
+      password: "",
+      isPwd: true
     }
   },
   methods: {
